@@ -1,0 +1,1 @@
+Este código é referente a um desafio proposto pela cadeira de Aplicação WEB para Automação de Testes, da Pós-Graduação em Automação de Testes De Software ministrado pelo Julio de Lima, onde o intuito era criar testes para validar uma página WEB utilizando o framework CYPRESS com JavaScript coom os padrões PageFactory e PageObjects.
