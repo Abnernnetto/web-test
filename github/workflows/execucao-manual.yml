@@ -1,0 +1,29 @@
+name: 'Execução Manual'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  e2e-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalando Yarn
+        run: npm install -g yarn
+
+      - name: Configurando Node.js 
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'node'
+
+      - name: Instalando dependências
+        run: yarn install
+
+      - name: Rodando testes e2e com Cypress
+        run: yarn run e2e
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 'relatorio-de-testes'
+          path: ./reports
